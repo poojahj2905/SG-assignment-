@@ -1,0 +1,28 @@
+<h3 style="color: chocolate">Registered Employees List</h3>
+
+<div *ngFor="let employee of employees | async" style="width: 300px;">
+  <div *ngIf="employee">
+    <div>
+      <div>
+      <label>First Name: </label> {{employee.firstName}}
+    </div>
+    <div>
+      <label>Last Name: </label> {{employee.lastName}}
+    </div>
+    <div>
+      <label>Gender: </label> {{employee.gender}}
+    </div>
+  <div>
+      <label>Date Of Birth: </label> {{employee.dob}}
+    </div>
+  <div> 
+      <label>Department: </label> {{employee.department}}
+    </div>
+    </div>
+
+  <br/><br/>
+
+    </div>
+</div> 
+
+

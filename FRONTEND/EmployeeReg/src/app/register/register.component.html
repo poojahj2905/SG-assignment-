@@ -1,0 +1,78 @@
+
+<div style="padding: 10px;">
+  <h4 style="color: chocolate">Register Employee Form</h4>
+  </div>
+  <div [hidden]="submitted" style="width: 300px;" >
+  <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName">
+    </div>
+  
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="employee.lastName" name="lastName">
+    </div>
+  
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <input type="text" class="form-control" id="gender" required [(ngModel)]="employee.gender" name="gender">
+    </div>
+  
+    <div class="form-group">
+      <label for="dob">Date Of Birth</label>
+      <input type="text" class="form-control" id="dob" required [(ngModel)]="employee.dob" name="dob">
+    </div>
+  
+    <div class="form-group">
+      <label for="department">Department</label>
+      <input type="text" class="form-control" id="department" required [(ngModel)]="employee.department" name="department">
+    </div>
+  
+    <button class="btn btn-success" type="submit" [disabled]="!registerForm.form.valid" >Submit</button>
+  </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+    <button class="btn btn-success" (click)="newEmployee()">Register</button>
+  </div>
+  
+
+
+
+<!-- <label class="error-message">{{ errMessage }}</label>
+<div class="register-container">
+<form class="login-form" (submit)='loginSubmit()' >
+  <mat-form-field>
+    <input class="firstName"placeholder="First Name"  matInput [formControl]='firstName'>
+    <mat-error *ngIf = 'firstName.invalid'>{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input class="lastName" placeholder="Last Name" matInput [formControl]='lastName'>
+    <mat-error *ngIf = 'lastName.invalid'>{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input class="gender" placeholder="Gender" matInput type = 'text' [formControl]='gender'>
+    <mat-error *ngIf = 'gender.invalid'>{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input class="dob" placeholder="Date Of Birth" matInput type = 'text' [formControl]='dob'>
+    <mat-error *ngIf = 'dob.invalid'>{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input class="department" placeholder="Department" matInput type = 'text' [formControl]='department'>
+    <mat-error *ngIf = 'department.invalid'>{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+ 
+
+  <button mat-button type="submit">Register</button>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <mat-error *ngIf = 'submitMessage' class="error-message">{{submitMessage}}</mat-error>
+</form>
+</div> -->

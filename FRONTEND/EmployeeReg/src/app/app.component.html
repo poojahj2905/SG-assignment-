@@ -1,0 +1,18 @@
+<!-- HeaderComponent to be displayed as part of AppComponent -->
+
+
+<!-- Login/Dashboard component to be rendered based on route -->
+
+
+<div style="padding: 20px;">
+  <h1 style="color: blue">{{title}}</h1>
+  <h3>{{description}}</h3>
+    <nav>
+    
+    <a routerLink="listOfEmployees" class="btn btn-primary active" role="button" routerLinkActive="active">Employees List</a>
+    <a routerLink="register" class="btn btn-primary active" role="button" routerLinkActive="active">Register Employee</a>
+  
+  </nav>  
+  <router-outlet></router-outlet>
+</div>
+
